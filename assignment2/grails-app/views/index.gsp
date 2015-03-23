@@ -19,20 +19,6 @@
 				border-radius: 0.6em;
 			}
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-
-			#status li {
-				line-height: 1.3;
-			}
 
 			#status h1 {
 				text-transform: uppercase;
@@ -40,83 +26,21 @@
 				margin: 0 0 0.3em;
 			}
 
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
 
 			p {
 				line-height: 1.5;
 				margin: 0.25em 0;
 			}
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
+			
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vestibulum et lorem et condimentum. Duis tortor eros, maximus sed suscipit ac, venenatis id lacus. Morbi velit lectus, pulvinar eget varius quis, tincidunt sed nibh. Quisque nulla velit, blandit sed scelerisque et, condimentum a lectus. Nulla in mollis dui, et sollicitudin est. Vivamus bibendum arcu eget augue faucibus, vel molestie diam imperdiet. In malesuada est a mattis pharetra.
+
+Mauris eu sagittis purus. Duis ac varius ante, vitae condimentum ligula. Phasellus quis sapien posuere quam tristique lobortis. Integer imperdiet iaculis massa eget scelerisque. Mauris placerat ultrices ante et placerat. Maecenas mauris erat, rutrum sit amet ultrices nec, varius ut urna. Donec dui lacus, feugiat et ipsum quis, viverra tempus quam. Nunc semper eleifend est, dapibus egestas neque. Curabitur neque sem, elementum ac congue in, venenatis quis mi. Duis dapibus consectetur urna, vitae efficitur diam lacinia fermentum. Quisque enim libero, commodo et volutpat nec, lacinia quis mauris. Sed sit amet eros non arcu accumsan vulputate. Aliquam vel tellus a nisi efficitur vestibulum ac ut libero.
+
+Nam ac maximus ante. Donec fringilla velit ut faucibus hendrerit. Aliquam scelerisque mauris vitae efficitur maximus. Fusce nec nulla posuere, congue sem at, tristique massa. Integer sit amet nisl fringilla, tempus neque cursus, laoreet est. Ut venenatis, nisi at tempus vulputate, neque est scelerisque felis, quis tempor leo elit sed enim. Fusce ac pharetra nunc. Quisque dui diam, rutrum id arcu et, rutrum luctus mauris.
 	</body>
 </html>
