@@ -13,7 +13,7 @@ String telephone
 	static belongsTo=Library
 
 	String toString(){
-	"$name, $email, $username, $password, $telephone"
+	"$name, $email, $userName, $password, $telephone"
 	}
 
     static constraints = {

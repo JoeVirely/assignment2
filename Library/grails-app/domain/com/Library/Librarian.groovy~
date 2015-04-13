@@ -10,7 +10,7 @@ String telephone
 
 	static hasMany=[library: Library]
 
-	belongsTo=Library
+	static belongsTo=Library
 
 	String toString(){
 	"$name, $email, $username, $password, $telephone"
