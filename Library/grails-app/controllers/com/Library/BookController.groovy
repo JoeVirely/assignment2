@@ -2,5 +2,5 @@ package com.Library
 
 class BookController {
 
-    def index() { }
+    def scaffold = Book
 }

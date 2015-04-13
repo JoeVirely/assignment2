@@ -7,8 +7,13 @@ String author
 String isbn
 Date dateBorrowed
 Date returnDate
-String Student
+String student
+
+
+	static hasMany=[library: Library]
 	
+	static belongsTo=Library
+
 	String toString() {
 	"$title, $author, $isbn, $student"
 	}

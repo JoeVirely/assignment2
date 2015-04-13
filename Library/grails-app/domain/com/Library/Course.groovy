@@ -7,6 +7,10 @@ String tutor
 String department
 String description
 
+	static hasMany=[students: Student]
+
+	static belongsTo=Student
+
 	String toString() {
 	"$title, $code, $tutor, $department, $description"
 	} 

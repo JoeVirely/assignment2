@@ -8,6 +8,10 @@ String userName
 String password
 String telephone
 
+	static hasMany=[library: Library]
+
+	static belongsTo=Library
+
 	String toString(){
 	"$name, $email, $username, $password, $telephone"
 	}

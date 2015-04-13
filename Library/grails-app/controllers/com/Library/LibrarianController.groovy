@@ -2,5 +2,5 @@ package com.Library
 
 class LibrarianController {
 
-    def index() { }
+    def scaffold = Librarian
 }
