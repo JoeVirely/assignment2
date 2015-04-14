@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>The Library Assignment</title>
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #eee;
@@ -81,42 +81,47 @@
 		</style>
 	</head>
 	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+		<div id="welcome">
+ 			<br />
+ 			<h3>Welcome to The Library System</h3>
+		 <p>This systems was created for the sole purpose of Joe passing his web architechtures module and none of the information displayed on this app is accurate or useful.</p>
+ 		</div>
+		<div class="homeCell">
+ 			<h3>Add a Library</h3>
+ 			<p>Here you can add a library</p>
+ 			<span class="buttons" >
+ 				<g:link controller="library" action="index">Add Library</g:link>
+ 			</span>
+ 		</div>
+		<div class="homeCell">
+ 			<h3>Add a Librarian</h3>
+ 			<p> Here you can add a librarian</p>
+ 			<span class="buttons" >
+ 				<g:link controller="librarian" action="index">Add Librarian</g:link>
+ 			</span>
+ 		</div>
+<div class="homeCell">
+ 			<h3>Add a Book</h3>
+ 			<p> Here you can add a book</p>
+ 			<span class="buttons" >
+ 				<g:link controller="book" action="index">Add Book</g:link>
+ 			</span>
+ 		</div>
+<div class="homeCell">
+ 			<h3>Add Student</h3>
+ 			<p> Here you can add a librarian</p>
+ 			<span class="buttons" >
+ 				<g:link controller="student" action="index">Add Student</g:link>
+ 			</span>
+ 		</div>
+		<div class="homeCell">
+ 			<h3>Add a Course</h3>
+ 			<p> Here you can add a Course</p>
+ 			<span class="buttons" >
+ 				<g:link controller="course" action="index">Add Course</g:link>
+ 			</span>
+ 		</div>
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
+
 	</body>
 </html>
